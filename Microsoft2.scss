@@ -1,0 +1,932 @@
+$color-nav-grey: #EEEEEE;
+
+@mixin pama {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin size ($w, $h, $bgc: white) {
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+
+@mixin flex($jus: center, $ali: center) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+@mixin border ($bor, $borr) {
+    border: $bor;
+    border-radius: $borr;
+}
+
+@mixin font($s, $w: normal) {
+    font-size: $s;
+    font-weight: $w;
+
+}
+
+@mixin animation($name, $dur, $count, $delay) {
+    animation-name: $name;
+    animation-duration: $dur;
+    animation-iteration-count: $count;
+    animation-delay: $delay;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @include pama();
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+//設定normal頁面大小-Flex
+.nav-container-normal {
+    max-width: 1600px;
+    margin: auto;
+    height: 54px;
+    @include flex(flex-start, )
+}
+
+//nav文字:更多
+.more {
+    display: none;
+}
+
+//logo圖片大小跟位置
+.logo {
+    margin-right: 10px;
+
+    & img {
+        width: 108px;
+    }
+}
+
+
+
+//清除超連結底線
+a {
+    text-decoration: none;
+    color: black;
+}
+
+//清除ol.ul的小黑點 //li清單會有padding} 
+.pcMenu-ul,
+.func-menu-ul {
+    list-style: none;
+    padding: 0;
+}
+
+//左邊清單寬度,設定px 不要設定%以免畫面拉窄被壓縮比例
+.pcMenu-ul {
+    width: 450px;
+    padding-left: 10px;
+    @include flex(space-around, );
+
+    & li {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+}
+
+//nav-container-normal父層有高度可直接設定100% -flex 
+//flexgrow 讓右半邊剩餘空間都留給right-funcMenu
+//justify-content: flex-end;靠又對齊
+.func-menu-ul {
+    height: 100%;
+    @include flex(flex-end, );
+    flex-grow: 1;
+    list-style: none;
+
+    & li {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    //inline底部基準線預設:baseline導致無法對齊
+    & span {
+        vertical-align: middle;
+    }
+
+    //右側清單小圖片設定 vertical-align圖文置中對齊
+    & .last-menu-item img {
+        vertical-align: middle;
+
+    }
+}
+
+.car-text {
+    margin-left: 40px;
+}
+
+.login-man {
+    margin-right: 10px
+}
+
+//設定漢堡條圖片的位置 
+//hidden---->859px在顯示
+.img-hamThree {
+    display: none;
+}
+
+
+//漢堡條的清單 //屬於html架構 所以建在外面
+//先把清單顯示位置整理好
+//hidden--->859px點選後-->顯示
+.navPcMenu {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 54px;
+    width: 100%;
+    @include pama(); //ul會影響padding margin
+
+
+    & li {
+        padding: 0 20px 0 10px;
+        border-bottom: 1px solid rgb(221, 220, 220);
+        @include size(100%, 50px, #f3f4f7);
+        @include flex(flex-start, );
+        position: relative;
+    }
+
+}
+
+//hidden hamburMenu的小清單--->點選後才顯示
+.navPcMenu>.ham-li-software {
+    display: none;
+}
+
+.navPcMenu>.ham-li-device {
+    display: none;
+}
+
+.navPcMenu>.ham-li-play {
+    display: none;
+}
+
+.navPcMenu>.ham-li-office {
+    display: none;
+}
+
+.navPcMenu>.ham-li-it {
+    display: none;
+}
+
+.navPcMenu>.ham-li-other {
+    display: none;
+}
+
+//讓箭頭圖片垂直致中在文字中間-->才不會位置不齊
+//將圖片位置定位在上層li的右邊
+.img-chevron-down {
+    vertical-align: middle;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+//hidden checkbox框框
+#ham-switch-software,
+#ham-switch-device,
+#ham-switch-play,
+#ham-switch-office,
+#ham-switch-it,
+#ham-switch-other,
+#ham-switch {
+    display: none;
+}
+
+.main {
+    width: 100%
+}
+
+.imgText-in {
+    text-align: left;
+    width: 28%;
+    height: 273px;
+    padding: 48px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    z-index: 33;
+
+
+    & h2 {
+        margin: 0;
+        font-size: 2.3125rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    & span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        cursor: pointer;
+        margin-bottom: 24px;
+    }
+
+    & a {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+    }
+
+    & button {
+        border: none;
+        width: 92px;
+        height: 40px;
+        background-color: #0067B8;
+        border-radius: 2px;
+    }
+}
+
+.part1-ul-img {
+    @include flex(center, flex-end);
+    @include size(100%, 190px, white);
+    list-style: none;
+    @include pama();
+
+    // background-color: #0067B8;
+    & li {
+        @include flex(center, );
+        flex-direction: column;
+        margin: 35px;
+
+    }
+
+    & a {
+        text-decoration: underline;
+        color: #0067B8;
+        @include font(16px, 600);
+        margin-top: 12px;
+    }
+}
+
+.part2-ul-img {
+    @include size(100%, 100%, );
+    @include flex(space-between, flex-start);
+    padding: 0 7%;
+    list-style: none;
+
+    & img {
+        width: 100%;
+    }
+
+    & li {
+        @include size(24%, 100%, );
+        margin: 0 10px;
+    }
+
+    & h2 {
+        margin: 10px 0;
+        @include font(1.8125rem, 600);
+    }
+
+    & span {
+        word-break: keep-all; // word-break 「單字/文字」斷行 keep-all必須保留完整單字，半形空格才能換行。
+    }
+}
+
+//設定超連結擺置與顏色
+.link {
+    margin-top: 15px;
+
+    & a {
+        color: #0067B8;
+        line-height: 40px;
+        margin-right: 10px;
+    }
+
+    & a span {
+        vertical-align: sub;
+        display: inline-block;
+        line-height: 20px;
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: 600; //文字對齊圖片下方(下標)vertical-align: sub
+    }
+
+}
+
+//設定頁面第二張大圖
+.part3-img {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 0 7%;
+
+    & img {
+        width: 100%;
+    }
+
+    & .imgText-onedrive {
+        width: 382px;
+        height: 272px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 200px;
+        word-break: keep-all;
+
+        & h2 {
+            font-weight: 600;
+            line-height: 1.2;
+            font-size: 2.3125rem;
+        }
+
+        & span {
+            display: block
+        }
+
+        & a {
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+        }
+
+        & button {
+            margin-top: 20px;
+            border: none;
+            width: 92px;
+            height: 40px;
+            background-color: #0067B8;
+            border-radius: 2px;
+        }
+
+    }
+}
+
+.part4-ul-img {
+    @include size(100%, 100%, );
+    padding: 0 7%;
+    list-style: none;
+
+    & div {
+        @include flex(space-between, flex-start);
+    }
+
+    & h2 {
+        display: block;
+        @include size(100%, 20px, );
+        font-size: 2.3125rem;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    & h3 {
+        font-size: 1.8125rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        word-break: keep-all;
+    }
+
+    & li {
+        @include size(24%, 100%, );
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & span {
+        word-break: keep-all;
+    }
+
+    & span:hover {
+        text-decoration: underline;
+        margin-right: 5px;
+        transition-duration: .5s
+    }
+
+    & .new-space {
+
+        @include size(100%, 50px, );
+        @include flex(flex-start, );
+
+        & span {
+            display: block;
+            @include size(70px, 30px, #ffB900);
+            @include flex(center, );
+        }
+    }
+
+    & a {
+        display: block;
+        margin-top: 20px;
+        color: #0067B8;
+        @include font(16px, 600);
+    }
+}
+
+.link-out {
+    padding: 0 7%;
+    @include size(100%, 32px, );
+
+    & img {
+        @include size(32px, 32px, );
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+
+}
+
+.back {
+    @include size(100%, 65px, none);
+    @include flex(flex-end, );
+    padding-right: 1%;
+    position: sticky;
+    bottom: 0;
+
+
+
+    & button {
+        @include size(113px, 41px, #cecdcd);
+        cursor: pointer;
+        border-radius: 0.125rem;
+        border: none;
+
+
+
+        & a {
+            font-size: 16px;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1;
+        }
+    }
+}
+
+.imgText-out {
+    display: none;
+    padding: 48px;
+
+    & h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    & span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        cursor: pointer;
+        margin-bottom: 24px;
+    }
+
+    & a {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+    }
+
+    & button {
+        border: none;
+        width: 92px;
+        height: 40px;
+        background-color: #0067B8;
+        border-radius: 2px;
+    }
+}
+
+.footer {
+    @include size(100%, 398px, );
+    background-color: #f2f2f2;
+
+    & .footerTab {
+        padding: 0 7%;
+        @include flex(space-between, flex-start);
+        background-color: #f2f2f2;
+
+        & ol {
+            padding: 0;
+            list-style: none;
+        }
+
+        & h3 {
+            font-size: 15px;
+            color: #616161;
+            font-weight: 600;
+        }
+
+        & li {
+            line-height: 3;
+            font-size: 12px;
+            color: #616161;
+        }
+    }
+
+    & .taiwan {
+        background-color: #f2f2f2;
+        padding: 0 7%;
+        @include flex(flex-end, );
+
+        & a {
+            margin-left: 18px;
+
+            & span {
+                line-height: 1;
+                font-size: 12px;
+                color: #616161;
+            }
+        }
+
+        & .taiwanImg {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+    }
+}
+
+
+
+
+
+//Media工作區
+
+
+
+
+//縮畫面nav會被擠壓 將normal設定padding
+@media (max-width:1800px) {
+    .nav-container-normal {
+        padding: 0 3%;
+    }
+}
+
+@media (max-width:1414px) {
+    .part3-img {
+        & .imgText {
+            & h2 {
+                font-size: 2.3125rem;
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+//畫面來到1399px-->function的 "購物車.登入.搜尋" 文字消失
+//四張圖片的h2字體變小
+@media (max-width:1399px) {
+    .swiper {
+        & .imgText {
+            & h2 {
+                font-size: 29px;
+            }
+        }
+    }
+
+
+
+    .func-text-hidden {
+        display: none;
+    }
+
+    .part2-ul-img h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .part3-img {
+        & .imgText-onedrive h2 {
+            font-size: 29px;
+        }
+    }
+
+    .part4-ul-img {
+        & h2 {
+            font-size: 29px;
+        }
+    }
+
+}
+
+//圖片中文字段行
+@media (max-width:1177px) {
+    .part3-img {
+        & .imgText-onedrive {
+            width: 257px;
+
+            & h2 {
+                word-break: keep-all;
+            }
+        }
+    }
+}
+
+@media (max-width:1083px) {
+    .part4-ul-img {
+        padding: 0 3%;
+        & li {
+            @include size(48%, 100%, );}
+        & div{flex-wrap: wrap;}}
+    
+    .link-out {
+        padding: 0 3%;}
+    .footer {
+        & .footerTab {
+            padding: 3%;
+            flex-wrap: wrap;
+
+            & ol {
+                width: 30%;
+            }
+        }
+
+        & .taiwan {
+            padding: 3%;
+        }
+    }
+
+    .swiper {
+        & .swiper-wrapper {
+            margin-bottom: 300px;
+        }
+
+        & .imgText-in {
+            display: none;
+        }
+    }
+
+    .imgText-out {
+        display: block;
+        @include size(98%, 224px, );
+        position: absolute;
+        left: 50%;
+        bottom: 12%;
+        z-index: 999;
+        box-shadow: 0 0 0.0625rem 0.125rem rgba(79, 78, 78, 0.11);
+        transform: translateX(-50%);
+
+        & span {
+            display: block;
+        }
+    }
+
+
+    .part3-img {
+        margin-bottom: 300px;
+        padding: 0;
+
+        & .imgText-onedrive {
+            & h2 {
+                margin: 0;
+            }
+
+            & span {
+                display: block;
+                line-height: 3;
+            }
+
+            padding: 48px;
+            @include size(98%, 224px, );
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0.0625rem 0.125rem rgba(79, 78, 78, 0.11);
+        }
+    }
+
+    .part2-ul-img {
+        flex-wrap: wrap;
+        padding: 5px;
+
+        & li {
+            width: 46%;
+        }
+    }
+}
+
+//畫面來到872px PC清單最後兩項(Xbox.支援)會消失-->顯示更多more
+@media (max-width:872px) {
+    .pcMenu-ul li:nth-last-of-type(2) {
+        display: none;
+    }
+
+    //將html架構li從後面數來第幾個
+    .pcMenu-ul li:nth-last-of-type(3) {
+        display: none;
+    }
+
+    .more {
+        display: block;
+    }
+}
+
+@media (max-width:767px) {
+    .footer {
+        & .taiwan {
+            display: flex;
+            flex-wrap: wrap;
+
+            & .taiwanImg {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+//畫面來到859px---> pcmenu / 所有microsoft消失
+//搜尋圖片推到最左邊
+@media (max-width:859px) {
+    .part3-img {
+        & .imgText-onedrive {
+            padding: 48px;
+            @include size(98%, 224px, );
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: none;
+        }
+    }
+
+    .pcMenu-ul {
+        display: none;
+    }
+
+    .all-microsoft {
+        display: none;
+    }
+
+    .serch-something {
+        //把放大鏡往左推 若li改成margin-right會導致搜尋靠右
+        margin-right: auto;
+    }
+
+    //logo要置中 以normal為基準relative
+    //畫面減少padding
+    .nav-container-normal {
+        position: relative;
+        padding: 0;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    //設定hamburger出現
+    .img-hamThree {
+        display: block;
+        height: 25px;
+        ;
+    }
+
+    //設定當[ ]被點選的狀況
+    //1.清單出現
+    //2.設定點選後效果-虛線/換圖片/展開清單
+
+    //連接漢堡圖片(label)使input打勾
+    #ham-switch:checked~.navPcMenu {
+        display: block;
+
+    }
+
+    #ham-switch-software:checked~.navPcMenu>.ham-li-software {
+        display: block;
+        @include flex(flex-start, );
+        padding-left: 40px;
+    }
+
+    #ham-switch-device:checked~.navPcMenu>.ham-li-device {
+        display: block;
+        @include flex(flex-start, );
+        padding-left: 40px;
+    }
+
+    #ham-switch-play:checked~.navPcMenu>.ham-li-play {
+        display: block;
+        @include flex(flex-start, );
+        padding-left: 40px;
+    }
+
+    #ham-switch-office:checked~.navPcMenu>.ham-li-office {
+        display: block;
+        @include flex(flex-start, );
+        padding-left: 40px;
+    }
+
+    #ham-switch-it:checked~.navPcMenu>.ham-li-it {
+        display: block;
+        @include flex(flex-start, );
+        padding-left: 40px;
+    }
+
+    #ham-switch-other:checked~.navPcMenu>.ham-li-other {
+        display: block;
+        @include flex(flex-start, );
+        padding-left: 40px;
+    }
+}
+
+//超連結要下去
+@media (max-width:638px) {
+    .link {
+        flex-direction: column;
+    }
+}
+
+//畫面來到584px-->第一部份三張圖片要自動換行 增加margin使空間不足推下去
+@media (max-width:584px) {
+    .part1-ul-img {
+        flex-wrap: wrap;
+        @include size(100%, 208px, white);
+
+        & li {
+            margin: 0 30px;
+        }
+    }
+}
+
+@media (max-width:539px) {
+    .back {
+        @include size(100%, 65px, none);
+        @include flex(center, );
+        padding:0 1%;
+        position: initial;
+        & button {
+            @include size(100%, 41px, #cecdcd);
+        }
+    }
+
+
+
+    .footer {
+        & .footerTab {
+            & ol {
+                width: 98%;
+            }
+
+        }
+    }
+
+    .part4-ul-img {
+        padding: 0px 20px;
+
+        & div {
+            flex-wrap: wrap;
+        }
+
+        & li {
+            width: 98%;
+        }
+
+        & h2 {
+            font-size: 24px;
+        }
+
+        & a {
+            margin-bottom: 30px;
+        }
+
+        & span {
+            word-break: break-all;
+        }
+    }
+
+    .part2-ul-img {
+        & li {
+            width: 95%;
+            margin: auto;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// word-break 「單字/文字」斷行
+// normal預設值，根據瀏覽器預設的斷行效果。
+// keep-all	必須保留完整單字，半形空格才能換行。
+// break-all不一定要完整單字才能換行。
+// inherit繼承自父層的 word-break 屬性設定。

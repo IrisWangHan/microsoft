@@ -1,0 +1,91 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+/* .imgbox{width: 1151px;height: 493.63px;background-color: aqua;} */
+
+/* 自行增加項目 */
+.swiper-wrapper {
+  margin-bottom: 60px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  top: 96.5%;
+  transition: all .2s linear;
+  opacity: 1 !important;
+  z-index: 100 !important;
+  /* button被pagination擋住 */
+}
+
+.swiper-button-next {
+  right: 49%;
+  transform: translateX(160%);
+  /* 用transform從另一邊推回來 如果左邊紐只推左邊比例 會縮畫面時導致縮再一起 */
+}
+
+.swiper-button-prev {
+  left: 49%;
+  transform: translateX(-160%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 25px;
+  color: black;
+  font-weight: 500;
+
+
+
+}
+
+.swiper-button-next:hover {
+  transform: translateX(170%);
+}
+
+.swiper-button-prev:hover {
+  transform: translateX(-170%);
+}
+
+/* .swiper-pagination{--swiper-theme-color: black;} */
+.swiper-pagination-bullet {
+  opacity: 1;
+  background-color: white;
+  border: 1px solid;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+}

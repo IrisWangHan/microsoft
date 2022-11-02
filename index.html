@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Microsoft2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <input type="checkbox" id="ham-switch-software">
+    <!--軟體的checkbox-->
+    <input type="checkbox" id="ham-switch-device">
+    <!--個人電腦和設備選項的checkbox-->
+    <input type="checkbox" id="ham-switch-play">
+    <!--娛樂的checkbox-->
+    <input type="checkbox" id="ham-switch-office">
+    <!--商務的checkbox-->
+    <input type="checkbox" id="ham-switch-it">
+    <!--IT的checkbox-->
+    <input type="checkbox" id="ham-switch-other">
+    <input type="checkbox" id="ham-switch">
+    <!--normal不滿版頁面 1 -->
+    <nav class="nav-container-normal">
+        <div class="logo">
+            <a href="#">
+                <img src="https://i.postimg.cc/1nbdKwKS/LOGO.png" alt="圖片無法被讀取">
+            </a>
+        </div>
+        <ul class="pcMenu-ul">
+            <li><a href="https://www.microsoft.com/zh-tw/microsoft-365?rtc=1">Microsoft 365</a></li>
+            <li><a href="https://www.microsoft.com/zh-tw/microsoft-teams/group-chat-software?rtc=1">Teams</a></li>
+            <li><a href="https://www.microsoft.com/zh-tw/windows/?r=1">Windows</a></li>
+            <li> <a href="https://www.microsoft.com/en-us/surface">Surface </a></li>
+            <li> <a href="https://www.xbox.com/zh-TW/">Xbox </a></li>
+            <li> <a href="https://support.microsoft.com/zh-tw">支援</a></li>
+            <li class="more"> <a href="https://support.microsoft.com/zh-tw">更多</a></li>
+        </ul>
+
+        <ul class="func-menu-ul">
+            <li class="ham-small">
+                <label for="ham-switch">
+                    <img class="img-hamThree" src="./img/hamn三.png">
+                </label>
+            </li>
+
+            <li class="all-microsoft">
+                <a href="#" class="last-menu-item">
+                    <span>所有Microsoft</span>
+                    <img style=" margin-right: 10px;;width: 18px;height: 22px; vertical-align:middle;"
+                        src="./img/下標2.png" alt="無法顯示">
+                </a>
+            </li>
+
+            <li class="serch-something">
+                <a href="#" class="last-menu-item">
+                    <span class="func-text-hidden">搜尋</span>
+                    <img style=" width: 24px;" src="https://i.postimg.cc/t7K0dQr6/nav.png" alt="無法顯示">
+                </a>
+            </li>
+            <li class="car">
+                <a href="#" class="last-menu-item">
+                    <span class="func-text-hidden car-text">購物車</span>
+                    <img style=" width: 22px;" src="https://i.postimg.cc/VSL2sYNx/nav.png" alt="無法顯示">
+                </a>
+            </li>
+            <li class="login-man">
+                <a href="#" class="last-menu-item">
+                    <span class="func-text-hidden">登入</span>
+                    <img style=" width: 38px;margin-left: 7px;" src="https://i.postimg.cc/PpCcZ2YK/nav.png" alt="無法顯示">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <ul class="navPcMenu">
+        <li><a href="https://www.microsoft.com/zh-tw/microsoft-365?rtc=1">Microsoft 365</a></li>
+        <li><a href="https://www.microsoft.com/zh-tw/microsoft-teams/group-chat-software?rtc=1">Teams</a></li>
+        <li><a href="https://www.microsoft.com/zh-tw/windows/?r=1">Windows</a></li>
+        <li><a href="https://www.microsoft.com/en-us/surface">Surface </a></li>
+        <li><a href="https://www.xbox.com/zh-TW/">Xbox </a></li>
+        <li><a href="https://support.microsoft.com/zh-tw">支援</a></li>
+
+        <!-- 漢堡條-清單-軟體soft的label點選區 -->
+        <label for="ham-switch-software" class="ham-label-software">
+            <li class="soft-li-bor">
+                <span>軟體 </span>
+                <img class="img-chevron-down img-chevron-soft" src="./img/chDown.png">
+            </li>
+        </label>
+        <!-- 漢堡條-清單-軟體點選後的list -->
+        <!-- ham-li-software預設要隱藏 -->
+        <li class="ham-li-software">
+            <a href="https://apps.microsoft.com/store/apps?hl=zh-tw&gl=tw&icid=CNavAppsWindowsApps">Windows應用程式</a>
+        </li>
+        <li class="ham-li-software">
+            <a href="https://www.microsoft.com/zh-tw/microsoft-365/onedrive/online-cloud-storage">OneDrive</a>
+        </li>
+        <li class="ham-li-software">
+            <a href="https://outlook.live.com/owa/">Outlook</a>
+        </li>
+        <li class="ham-li-software">
+            <a href="#">Skype</a>
+        </li>
+        <li class="ham-li-software">
+            <a
+                href="https://www.microsoft.com/zh-tw/microsoft-365/onenote/digital-note-taking-app?ms.url=onenotecom&rtc=1">OneNote</a>
+        </li>
+        <li class="ham-li-software">
+            <a href="https://www.microsoft.com/zh-tw/microsoft-teams/group-chat-software?rtc=1">MicrosoftTeams</a>
+        </li>
+
+
+
+
+        <!-- 漢堡條-清單-個人電腦和設備device的label點選區 -->
+        <label for="ham-switch-device" class="ham-label-device">
+            <li class="device-li-bor">
+                <span>個人電腦和設備 </span>
+                <img class="img-chevron-down img-chevron-device" src="./img/chDown.png" alt=" ">
+            </li>
+        </label>
+        <!-- 漢堡條-清單-個人電腦和設備點選後的list -->
+        <!-- ham-li-device預設要隱藏 -->
+        <li class="ham-li-device">
+            <a href="https://www.microsoft.com/zh-tw/store/b/xbox?icid=CNavDevicesXbox">選購Xbox</a>
+        </li>
+        <li class="ham-li-device">
+            <a href="https://www.microsoft.com/zh-tw/accessories">電腦配件</a>
+        </li>
+
+
+
+        <!-- 漢堡條-清單-娛樂play的label點選區 -->
+        <label for="ham-switch-play" class="ham-label-play">
+            <li class="play-li-bor">
+                <span>娛樂 </span>
+                <img class="img-chevron-down img-chevron-play" src="./img/chDown.png" alt=" ">
+            </li>
+        </label>
+        <!-- 漢堡條-清單-娛樂play點選後的list -->
+        <!-- ham-li-play預設要隱藏 -->
+        <li class="ham-li-play"><a href="#">Xbox Game Pass Ultimate</a> </li>
+        <li class="ham-li-play"><a href="#">Xbox Live Gold</a> </li>
+        <li class="ham-li-play"><a href="#">Xbox與遊戲</a> </li>
+        <li class="ham-li-play"><a href="#">電腦遊戲</a> </li>
+        <li class="ham-li-play"><a href="#">Windows遊戲</a> </li>
+
+
+        <!-- 漢堡條-清單-商務適用office的label點選區 -->
+        <label for="ham-switch-office" class="ham-label-office">
+            <li class="office-li-bor">
+                <span>商務適用 </span>
+                <img class="img-chevron-down img-chevron-office" src="./img/chDown.png" alt=" ">
+            </li>
+        </label>
+        <!-- 漢堡條-清單-商務適用office點選後的list -->
+        <!--ham-li-office預設要隱藏 -->
+        <li class="ham-li-office"><a href="">開發人員與中心</a> </li>
+        <li class="ham-li-office"><a href="">文件</a> </li>
+        <li class="ham-li-office"><a href="">Microsoft Learn</a> </li>
+        <li class="ham-li-office"><a href="">Microsoft 技術社群</a> </li>
+        <li class="ham-li-office"><a href="">Azure Marketplace</a> </li>
+        <li class="ham-li-office"><a href="">AppSourse</a> </li>
+        <li class="ham-li-office"><a href="">Visual Studio</a> </li>
+
+
+
+
+        <!-- 漢堡條-清單-開發人員與IT的label點選區 -->
+        <label for="ham-switch-it" class="ham-label-it">
+            <li class="it-li-bor">
+                <span>開發人員與IT </span>
+                <img class="img-chevron-down img-chevron-it" src="./img/chDown.png" alt=" ">
+            </li>
+        </label>
+        <!-- 漢堡條-清單-開發人員與IT點選後的list -->
+        <!--ham-li-it預設要隱藏 -->
+        <li class="ham-li-it"><a href="">Microsoft Cloud</a> </li>
+        <li class="ham-li-it"><a href="">Microsoft安全性</a> </li>
+        <li class="ham-li-it"><a href="">Azure</a> </li>
+        <li class="ham-li-it"><a href="">Dynamics 365</a> </li>
+        <li class="ham-li-it"><a href="">商務用Microsoft 365</a> </li>
+        <li class="ham-li-it"><a href="">Microsoft產業</a> </li>
+        <li class="ham-li-it"><a href="">Microsoft Power Platform</a> </li>
+        <li class="ham-li-it"><a href="">Windows365</a> </li>
+
+
+
+
+        <!-- 漢堡條-清單-其他的label點選區 -->
+        <label for="ham-switch-other" class="ham-label-other">
+            <li class="other-li-bor">
+                <span>其他 </span>
+                <img class="img-chevron-down img-chevron img-chevron-other" src="./img/chDown.png" alt=" ">
+            </li>
+        </label>
+        <!-- 漢堡條-清單-其他點選後的list -->
+        <!--ham-li-other預設要隱藏 -->
+        <li class="ham-li-other"><a href="">Microsoft Rewards</a> </li>
+        <li class="ham-li-other"><a href="">免費下載與安全性</a> </li>
+        <li class="ham-li-other"><a href="">教育</a> </li>
+        <li class="ham-li-other"><a href="">禮品卡</a> </li>
+        <li class="ham-li-other"><a href="">Licensing</a> </li>
+        <li><a href="https://www.microsoft.com/zh-tw/sitemap.aspx">檢視網站地圖</a></li>
+    </ul>
+
+    <div class="main">
+        <div class="swiper mySwiper">
+            <!-- 包裹slide每一頁的box -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide imgbox">
+                    <picture>
+                        <source media="(min-width: 1400px)" srcset="./img/封面第一張手摸著筆電1920.jfif">
+                        <source media="(min-width: 1084px)" srcset="./img/封面第一張手摸著筆電1399.jfif">
+                        <source media="(min-width: 860px)" srcset="./img/手摸著筆電1083.avif">
+                        <source media="(min-width: 540px)" srcset="./img/手摸著筆電859.avif">
+                        <img src="./img/手摸著筆電img.avif" alt="手摸著筆電">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width: 1400px)" srcset="./img/封面第二章laptop1920.webp">
+                        <source media="(min-width: 1084px)" srcset="./img/封面第二章laptop1399x600.webp">
+                        <source media="(min-width: 860px)" srcset="./img/封面第二章laptop-1083x600.jfif">
+                        <source media="(min-width: 540px)" srcset="./img/封面第二章laptop859x540.jfif">
+                        <img src="./img/封面第二章laptop-539x440.jfif" alt="一台筆電">
+                    </picture>
+                </div>
+            </div>
+            <div class="imgText-in">
+                <h2>Surface Pro 8</h2>
+                <span>運用更大的 13 吋觸控螢幕、更快的連線，以及提升的速度，成就更多。現在提供 Windows 11。</span>
+                <button><a href="#">深入了解</a></button>
+            </div>
+            <div class="imgText-out">
+                <h2>Surface Pro 8</h2>
+                <span>運用更大的 13 吋觸控螢幕、更快的連線，以及提升的速度，成就更多。現在提供 Windows 11。</span>
+                <button><a href="#">深入了解</a></button>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+
+        <ul class="part1-ul-img">
+            <li>
+                <img src="./img/十字黑底.webp" alt="四格黑色小方塊">
+                <a href="#">選擇您的 Microsoft 365</a>
+            </li>
+            <li>
+                <img src="./img/十字黑底旁的圖案.webp" alt="白色立起來的平版圖案">
+                <a href="#">選擇 surface 裝置</a>
+            </li>
+            <li>
+                <img src="./img/十字黑底.webp" alt="四格黑色小方塊">
+                <a href="#">取得Windows 11</a>
+            </li>
+        </ul>
+        <ul class="part2-ul-img">
+            <li>
+                <picture>
+                    <source srcset="./img/p2-1-min1400.webp" media="(min-width:1400px)">
+                    <source srcset="./img/四張圖-第一個365(297.webp" media="(min-width:1084px)">
+                    <source srcset="./img/四張圖第1個365(517.avif" media="(min-width:860px)">
+                    <source srcset="./img/四張圖-第一個365 (406.webp" media="(min-width:540px)">
+                    <img src="./img/四張圖-第一個365 (406.webp" alt="Microsoft365">
+                </picture>
+                <h2>Microsoft 365</h2>
+                <span>進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。 </span>
+                <div class="link">
+                    <a href="#">
+                        <span>適合 1 人使用</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="#"><span>最多可供 6 人使用</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <picture>
+                    <source srcset="./img/p2-2-min1400px.webp" media="(min-width:1400px)">
+                    <source srcset="./img/p2-2-min1084px.webp" media="(min-width:1084px)">
+                    <source srcset="./img/p2-2-min860px.avif" media="(min-width:860px)">
+                    <source srcset="./img/p2-2-min540px.webp" media="(min-width:540px)">
+                    <img src="./img/p2-2-min-img.avif" alt="laptop4">
+                </picture>
+                <h2>Surface Laptop 4</h2>
+                <span> 運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦。 </span>
+                <div class="link">
+                    <a href="#"><span>立即選購</span> <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </li>
+
+            <li>
+                <picture>
+                    <source srcset="./img/p2-3-min1400.avif" media="(min-width:1400px)">
+                    <source srcset="./img/p2-3-min1084.webp" media="(min-width:1084px)">
+                    <source srcset="./img/p2-3-min860.webp" media="(min-width:860px)">
+                    <source srcset="./img/p2-3-min540.avif" media="(min-width:540px)">
+                    <img src="./img/p2-3-img.webp" alt="Microsoft Edge">
+                </picture>
+                <h2>Microsoft Edge</h2>
+                <span> 在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。 </span>
+                <div class="link">
+                    <a href="#"><span>立即下載</span> <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </li>
+
+            <li>
+                <picture>
+                    <source srcset="./img/p2-4-min1400.webp" media="(min-width:1400px)">
+                    <source srcset="./img/p2-4-min1084.webp" media="(min-width:1084px)">
+                    <source srcset="./img/p2-4-min860.avif" media="(min-width:860px)">
+                    <source srcset="./img/p2-4-min540.webp" media="(min-width:540px)">
+                    <img src="./img/p2-4-minimg.avif" alt=" PC Game Pass">
+                </picture>
+                <h2> PC Game Pass</h2>
+                <span> 解鎖 100 多款精彩遊戲和 EA Play，而且首月只需 NT$30。 此優惠僅適用於新訂閱者。 </span>
+                <div class="link">
+                    <a href="#"><span>立即加入</span> <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </li>
+        </ul>
+        <div class="part3-img">
+            <picture>
+                <source
+                    srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-Hero-OneDriveCampaignRefresh-2:VP5-1596x600"
+                    media="(min-width:1400px)">
+                <source srcset="./img/p3-1084px.avif" media="(min-width:1084px)">
+                <source srcset="./img/p3-860px.avif" media="(min-width:860px)">
+                <source
+                    srcset="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-Hero-OneDriveCampaignRefresh-2:VP2-859x540"
+                    media="(min-width:540px)">
+                <img src="./img/p3-img.avif" alt="Microsoft365">
+            </picture>
+
+            <div class="imgText-onedrive">
+                <h2>Microsoft OneDrive </h2>
+                <span>將檔案和相片儲存到 OneDrive，即可隨時隨地從任何裝置存取</span>
+                <button><a href="#">深入了解</a></button>
+            </div>
+        </div>
+        <ul class="part4-ul-img">
+            <h2>適用於商務</h2>
+            <div>
+                <li>
+                    <picture>
+                        <source srcset="./img/p4-1-1400px.webp" media="(min-width:1400px)">
+                        <source srcset="./img/p4-1-1084px.webp" media="(min-width:1084px)">
+                        <source srcset="./img/p4-1-860px.webp" media="(min-width:860px)">
+                        <source srcset="./img/p4-1-540px.webp" media="(min-width:540px)">
+                        <img src="./img/p4-1-IMG.webp" alt="">
+                    </picture>
+                    <div class="new-space">
+                        <span>新上市</span>
+                    </div>
+                    <h3>Surface Laptop Go 2 商務版</h3>
+                    <span>外型時尚、方便攜帶的筆記型電腦配備絕佳的打字體驗、Windows 11 專業版和專業級效能。</span>
+                    <a href="#">
+                        <span>深入了解</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <picture>
+                        <source srcset="./img/p4-2-1400px.webp" media="(min-width:1400px)">
+                        <source srcset="./img/p4-2-1084px.webp" media="(min-width:1084px)">
+                        <source srcset="./img/p4-2-860px.webp" media="(min-width:860px)">
+                        <source srcset="./img/p4-2-540px.webp" media="(min-width:540px)">
+                        <img src="./img/p4-2-IMG.webp" alt="">
+                    </picture>
+                    <div class="new-space"></div>
+                    <h3>免費取得 Microsoft Teams</h3>
+                    <span>線上會議、聊天和共用雲端儲存空間，盡在一處。</span>
+                    <a href="#">
+                        <span>免費註冊</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <picture>
+                        <source srcset="./img/p4-3-1400px.webp" media="(min-width:1400px)">
+                        <source srcset="./img/p4-3-1084px.webp" media="(min-width:1084px)">
+                        <source srcset="./img/p4-3-860px.webp" media="(min-width:860px)">
+                        <source srcset="./img/p4-2-540px.webp" media="(min-width:540px)">
+                        <img src="./img/p4-3-IMG.webp" alt="">
+                    </picture>
+                    <div class="new-space"></div>
+                    <h3>Microsoft 365 商務版</h3>
+                    <span>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</span>
+                    <a href="#">
+                        <span>立即選購</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <picture>
+                        <source srcset="./img/p4-4-1400.jfif" media="(min-width:1400px)">
+                        <source srcset="./img/p4-4-1084px.jfif" media="(min-width:1084px)">
+                        <source srcset="./img/p4-4-860px.avif" media="(min-width:860px)">
+                        <source srcset="./img/p4-4-540px.jfif" media="(min-width:540px)">
+                        <img src="./img/p4-4-IMG.jfif" alt="">
+                    </picture>
+                    <div class="new-space"></div>
+                    <h3>商務用 Windows 11 登場</h3>
+                    <span>專為混合式辦公而設計。 為員工帶來實用性。 為 IT 帶來一致性。 為所有人帶來安全性。</span>
+                    <a href="#">
+                        <span>深入了解</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+
+            </div>
+        </ul>
+        <div class="link-out">
+            <span>關注Microsoft</span>
+            <img src="./img/FB-logo.png" alt="">
+            <img src="./img/yt-logo.png" alt="">
+        </div>
+
+    </div>
+    <div class="back">
+        <button>
+            <i class="fa-solid fa-arrow-up"></i>
+            <a href="#">回到頁首</a>
+        </button>
+    </div>
+    <div class="footer">
+        <div class="footerTab">
+            <ol>
+                <h3>最新動向</h3>
+                <li>Microsoft 365</li>
+                <li>Surface Go</li>
+                <li>Surface Book 2</li>
+                <li>Surface Pro</li>
+                <li>Windows 11 應用程式</li>
+            </ol>
+            <ol>
+                <h3>Microsoft Store</h3>
+                <li>帳戶設定檔</li>
+                <li>下載中心</li>
+                <li>Microsoft Store 支援</li>
+                <li>退貨/退款</li>
+                <li>訂單追蹤</li>
+            </ol>
+            <ol>
+                <h3>教育</h3>
+                <li>Microsoft 教育</li>
+                <li>教育裝置</li>
+                <li>Microsoft Teams 教育版</li>
+                <li>Microsoft 365 教育版</li>
+                <li>Office 教育版</li>
+                <li>教育工作者訓練和發展</li>
+                <li>學生和家長優惠</li>
+                <li>Azure 學生版</li>
+            </ol>
+            <ol>
+                <h3>商務</h3>
+                <li>Microsoft Cloud</li>
+                <li>Microsoft 安全性</li>
+                <li>Azure</li>
+                <li>Dynamics 365</li>
+                <li>Microsoft 365</li>
+                <li>Microsoft Advertising</li>
+                <li>Microsoft 產業</li>
+                <li>Microsoft Teams</li>
+            </ol>
+            <ol>
+                <h3>開發人員與 IT</h3>
+                <li>開發人員中心</li>
+                <li>文件</li>
+                <li>Microsoft Learn</li>
+                <li>Microsoft 技術社群</li>
+                <li>Azure Marketplace</li>
+                <li>AppSource</li>
+                <li>Microsoft Power Platform</li>
+                <li>Visual Studio</li>
+            </ol>
+            <ol>
+                <h3>公司</h3>
+                <li>人才招募</li>
+                <li>公司新聞</li>
+                <li>Microsoft 隱私權</li>
+                <li>投資者</li>
+                <li>永續性 </li>
+            </ol>
+        </div>
+        <div class="taiwan">
+            <a href="#" class="taiwanImg">
+                <i class="fa-solid fa-earth-americas"></i>
+                <span>中文(台灣)</span>
+            </a>
+            <a href="#"><span>連絡 Microsoft</span></a>
+            <a href="#"><span>隱私權</span></a>
+            <a href="#"><span>使用規定</span></a>
+            <a href="#"><span>商標</span></a>
+            <a href="#"><span>有關我們的廣告訊息</span></a>
+
+            <a href="#">
+                <i class="fa-regular fa-copyright"></i>
+                <span>Microsoft2022</span>
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+
+        var img_hamThree = document.querySelector('.img-hamThree')
+        img_hamThree.onclick = function () {
+            img_hamThree.src = "./img/ham-X.png"
+
+        }
+        var soft_li_bor = document.querySelector('.soft-li-bor')
+        var img_chevron_soft = document.querySelector('.img-chevron-soft')
+        var device_li_bor = document.querySelector('.device-li-bor ')
+        var img_chevron_device = document.querySelector('.img-chevron-device')
+        var play_li_bor = document.querySelector('.play-li-bor ')
+        var img_chevron_play = document.querySelector('.img-chevron-play')
+        var office_li_bor = document.querySelector('.office-li-bor')
+        var img_chevron_office = document.querySelector('.img-chevron-office')
+        var it_li_bor = document.querySelector('.it-li-bor ')
+        var img_chevron_it = document.querySelector('.img-chevron-it')
+        var other_li_bor = document.querySelector('.other-li-bor')
+        var img_chevron_other = document.querySelector('.img-chevron-other')
+        var Array123 = [soft_li_bor, device_li_bor, play_li_bor, office_li_bor, it_li_bor, other_li_bor]
+
+
+        soft_li_bor.onclick = function () {
+            console.log(img_chevron_soft.src);
+            //if判斷用== 或是include包含字串(建議)
+            if (img_chevron_soft.src.includes('/img/chDown.png')) {
+                Array123.forEach(element => {
+                    element.style.border = 'none'
+                });
+                soft_li_bor.style.border = '1px dashed'
+                img_chevron_soft.src = "./img/chTop.png"
+            }
+            else {
+                img_chevron_soft.src = "./img/chDown.png"
+                // 圖片命名不要用中文 會出現亂碼
+            }
+
+        }
+
+        device_li_bor.onclick = function () {
+            if (img_chevron_device.src.includes('/img/chDown.png')) {
+                Array123.forEach(element => {
+                    element.style.border = 'none'
+                });
+                device_li_bor.style.border = '1px dashed'
+                img_chevron_device.src = "./img/chTop.png"
+            }
+            else {
+                img_chevron_device.src = "./img/chDown.png"
+                // 圖片命名不要用中文 會出現亂碼
+            }
+        }
+
+        play_li_bor.onclick = function () {
+            if (img_chevron_play.src.includes('/img/chDown.png')) {
+                Array123.forEach(element => {
+                    element.style.border = 'none'
+                });
+                play_li_bor.style.border = '1px dashed'
+                img_chevron_play.src = "./img/chTop.png"
+            }
+            else {
+                img_chevron_play.src = "./img/chDown.png"
+                // 圖片命名不要用中文 會出現亂碼
+            }
+        }
+
+        office_li_bor.onclick = function () {
+            if (img_chevron_office.src.includes('/img/chDown.png')) {
+                Array123.forEach(element => {
+                    element.style.border = 'none'
+                });
+                office_li_bor.style.border = '1px dashed'
+                img_chevron_office.src = "./img/chTop.png"
+            }
+            else {
+                img_chevron_office.src = "./img/chDown.png"
+                // 圖片命名不要用中文 會出現亂碼
+            }
+        }
+
+        it_li_bor.onclick = function () {
+            if (img_chevron_it.src.includes('/img/chDown.png')) {
+                Array123.forEach(element => {
+                    element.style.border = 'none'
+                });
+                it_li_bor.style.border = '1px dashed'
+                img_chevron_it.src = "./img/chTop.png"
+            }
+            else {
+                img_chevron_it.src = "./img/chDown.png"
+                // 圖片命名不要用中文 會出現亂碼
+            }
+        }
+
+        other_li_bor.onclick = function () {
+            if (img_chevron_other.src.includes('/img/chDown.png')) {
+                Array123.forEach(element => {
+                    element.style.border = 'none'
+                });
+                other_li_bor.style.border = '1px dashed'
+                img_chevron_other.src = "./img/chTop.png"
+            }
+            else {
+                img_chevron_other.src = "./img/chDown.png"
+                // 圖片命名不要用中文 會出現亂碼
+            }
+        }
+
+
+        const back = document.querySelector('.back')
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<!-- 
+//問題1.如何將小menu的箭頭更換
+//問題2.點選小清單後 會跑出scrollbar
+//問題3.超連結尚未設定好
+
+//問題4..navPcMenu 無法display:none  
+        ANS:直接在標籤上設定
+//問題5.menu & 漢堡條叉叉如何同時動作 --目前線條動作失效 如何變圖?
+        ANS:暫時用圖片
+//問題6.設定hamburger-menu清單 但是有插入箭頭圖片 導致文字原本置中效果被影響 
+        ANS:對圖片做vertical-align:middle將圖片對齊文字的中間位置(文字已經用flex上下對齊了)
+//問題7.當我畫面縮到859px 漢堡條出現 同時 放大鏡往左對齊 但是我用position導致重疊
+        ANS:將漢堡條圖片取消positional 只需要block出現 
+            而serch因為html的架構會處在漢堡條的右邊
+            只需要在serch輸入margin-right:auto;把剩餘空間分到右邊
+//問題8.當我點選hambur裡面的小清單 發現要點擊"文字 圖片"才可以展開?
+        ANS:因為原本label只有包到這兩項 只有這兩項會讓checkbox打勾
+        所以要把li包進去label才可以點選空白處有作用
+
+    -->
+
+<!--
+HTML <picture> 響應式圖片 (Responsive Images) - 自動載入不同尺寸和檔案格式的圖片
+<picture> 標籤 (tag) 有下面這些用途，常被應用在響應式網頁設計 (Responsive web design, RWD) 或手機行動版網頁設計：
+
+讓瀏覽器 (browser) 可以根據不同的螢幕條件下 (media conditions)，自動載入不同尺寸 (size) 的圖片
+語法範例：
+
+<picture>
+  <source srcset="/media/cat-240.jpg"
+          media="(min-width: 800px)">
+  <img src="/media/cat.jpg">
+</picture>
+
+<picture> 本身是一個容器 (container)，
+    裡面用零個或多個 <source> +一個 <img> 標籤來設定不同的圖片，
+    瀏覽器會先從 <source> 去找有沒匹配 (match) 條件的圖片，
+    如果沒有的話 (或瀏覽器不支援 <picture> 標籤) 則使用 <img> 所設定的圖片。
+
+
+
+
+**back要消失
+讓圖片還可以回去上下
+swiper部會動
+    -->
